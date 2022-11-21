@@ -1,0 +1,17 @@
+import scipy 
+from scipy.interpolate import CubicSpline
+import numpy as np
+import matplotlib.pyplot as plt
+def fun(x):
+    return 2**x
+x=[0,1,2]
+y=[1,2,4]
+
+D=np.loadtxt
+f=scipy.interpolate.CubicSpline(x,y)
+v=np.linspace(0,5,100)
+plt.plot(v,f(v))
+plt.plot(v,fun(v))
+print(f(1.5))
+print(fun(1.5))
+plt.show()
